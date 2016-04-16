@@ -4,11 +4,97 @@
   <title>Business</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+ <%= csrf_meta_tags %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+ <!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">Profile</a></li>
+  <li><a href="#!">Courses</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">Log Out</a></li>
+</ul>
 
+
+
+<ul id="dropdown2" class="dropdown-content">
+  <li><a href="#!">Profile</a></li>
+  <li><a href="#!">Courses</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">Log Out</a></li>
+</ul>
+
+
+
+<header>
+<nav class="  blue-grey darken-1 z-depth-2">
+    <div class="container">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Frame88</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="Courses">Courses</a></li>
+        <li><a href="Sign Up">Sign Up</a></li>
+        <li><a href="Log In">Log In</a></li>
+        <!-- Dropdown Trigger -->
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Reggie Tucker<i class="material-icons right">arrow_drop_down</i></a></li>
+        
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="Courses">Courses</a></li>
+        <li><a href="Sign Up">Sign Up</a></li>
+        <li><a href="Log In">Log In</a></li>
+        <!-- Dropdown Trigger -->
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Reggie Tucker<i class="material-icons right">arrow_drop_down</i></a></li>
+        
+      </ul>
+    </div>
+  </div>
+  </nav>
+</header>
+
+
+<main>
+ <div class="container">
 <%= yield %>
+</div>
+</main>
+
+<footer class="page-footer   blue-grey darken-1 z-depth-2">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Frame88</h5>
+                <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu lacus rutrum, maximus est sed, elementum nibh. Etiam auctor elit lacinia scelerisque porta. Nullam id lectus at arcu mattis fringilla. Nulla ut ex sem. Quisque faucibus, elit nec .</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Social</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Twitter</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Google Plus</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 Reggie Tucker
+            <%= link_to "About Us", pages_about_path, :class => "grey-text text-lighten-4 right" %>
+            </div>
+          </div>
+        </footer>
+            
+
 
 </body>
+
+<script>
+  $(".button-collapse").sideNav();
+  $(".dropdown-button").dropdown();
+</script>
 </html>
